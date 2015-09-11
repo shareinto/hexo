@@ -6,7 +6,7 @@
 title: shareinto
 subtitle:
 description:
-author: Lin Jing
+author: Dockerfun
 language: zh-Hans
 timezone:
 
@@ -63,7 +63,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: next
+theme: yilia
 stylus:
   compress: true
 

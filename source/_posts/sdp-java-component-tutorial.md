@@ -3,12 +3,12 @@ date: 2015-09-10 16:38:06
 tags: sdp java-component
 ------
 ## 0. 准备
- >* 阅读本文前，请先登录[gitlab](http://git.menethil.net),以保证你的帐号在代码仓库中存在（注：初始密码和工号一样，密码修改请到[这里](http://erp.menethil.net),若工号不存在,请qq:56471924通知我)
+ >* 阅读本文前，请先登录[gitlab](http://git.menethil.net),以保证你的帐号在代码仓库中存在（注：初始密码和工号一样，密码修改请到[http://erp.menethil.net](http://erp.menethil.net),若工号不存在,请qq:56471924通知我)
  
 ## 1. 登录
 >* 打开我渴了[共享平台](http://sdp.menethil.net),点击右上角登录按钮进行登录 如下图  
  ![login](http://7xlovv.com1.z0.glb.clouddn.com/login.jpg)  
- >* 在弹出框中输入工号和密码。（注：初始密码和工号一样，密码修改请到[这里](http://erp.menethil.net),若工号不存在,请qq:56471924通知我)
+ >* 在弹出框中输入工号和密码。（注：初始密码和工号一样，密码修改请到[http://erp.menethil.net](http://erp.menethil.net),若工号不存在,请qq:56471924通知我)
  
 ## 2. 创建
  >* 登录完成后，点击我的应用，跳转到我的应用页面  
@@ -27,7 +27,7 @@ tags: sdp java-component
   * 如果您的windows操作系统还没有安装git客户端，请到[这里](http://cdncs.101.com/v0.1/static/skin_manager/default/biz-comp-main/ios/Git_V1.9.5_preview20150319.1435310867.exe?&attachment=true)下载安装
   * 安装完毕后，在空白地方点击鼠标右键，可以看到git相关菜单  
   ![git-setup](http://7xlovv.com1.z0.glb.clouddn.com/git-setup.jpg)  
-  * git sshkey生成： 请先登录[gitlab](http://git.menethil.net),然后点击[这里](http://git.menethil.net/help/ssh/README)查看key生成教程，将生成的key添加到[这里](http://git.menethil.net/profile/keys/new)
+  * git sshkey生成： 请先登录[gitlab](http://git.menethil.net),然后点击[http://git.menethil.net/help/ssh/README](http://git.menethil.net/help/ssh/README)查看key生成教程，将生成的key添加到[http://git.menethil.net/profile/keys/new](http://git.menethil.net/profile/keys/new)
   * 克隆仓库到本地： 找到你的开发目录，在空白的地点点击鼠标右键，点击**Git Bash**，键入 git clone 详情页中的GIT地址  
  ![git-clone](http://7xlovv.com1.z0.glb.clouddn.com/git-clone.jpg)
  
@@ -37,7 +37,7 @@ tags: sdp java-component
 $ cd test
 ```
 >我们的项目都使用git flow进行开发，windows下git
->flow的安装请参照[这里](http://shareinto.github.io/2015/09/10/windows-git-flow-install/),git flow[简明教程](http://danielkummer.github.io/git-flow-cheatsheet/)
+>flow的安装请参照[windows下git-flow的安装](http://shareinto.github.io/2015/09/10/windows-git-flow-install/),[git flow简明教程](http://danielkummer.github.io/git-flow-cheatsheet/)
 >git flow安装完毕以后，在项目根目下运行
 ```bash
 $ git flow init
