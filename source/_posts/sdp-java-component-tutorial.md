@@ -70,7 +70,7 @@ $ git push origin develop:develop
 >在共享平台的test项目详情页下，当前环境选择**开发**(开发对应的是develop分支，只进行package操作，不进行deploy操作)，然后点击发布，输入版本号和发布内容，点击确定
 ![sdp-develop](http://7xlovv.com1.z0.glb.clouddn.com/sdp-develop.jpg)
 
-##5. 生产环境发布
+## 5. 生产环境发布
 >将develop分支内容合并到master分支
 ```bash
 $ git flow release start function_plus
