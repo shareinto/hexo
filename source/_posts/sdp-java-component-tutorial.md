@@ -1,6 +1,9 @@
 title: sdp-java组件模块使用教程
 date: 2015-09-10 16:38:06
-tags: sdp java-component
+categories: sdp
+tags: 
+  - sdp 
+  - java-component
 ------
 ## 0. 准备
  >* 阅读本文前，请先登录[gitlab](http://git.menethil.net),以保证你的帐号在代码仓库中存在（注：初始密码和工号一样，密码修改请到[http://erp.menethil.net](http://erp.menethil.net),若工号不存在,请qq:56471924通知我)

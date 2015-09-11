@@ -1,6 +1,10 @@
 title: centos6.5上安装docker环境
 date: 2015-09-11 17:53:13
-tags: linux, docker
+categories: docker
+tags: 
+  - centos
+  - linux
+  - docker
 ---
 ## 准备
 docker容器最早受到RHEL完善的支持是从最近的CentOS 7.0开始的，官方说明是只能运行于64位架构平台，内核版本为2.6.32-431及以上（建议升级到3.10.x,否则低版本会出现各种各样莫名的问题），升级内核请参考[centos6.5内核升级](http://shareinto.github.io/2015/09/11/centos6-5-kernel-update/)

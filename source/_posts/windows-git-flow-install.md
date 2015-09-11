@@ -1,6 +1,11 @@
 title: windows下git-flow的安装
 date: 2015-09-10 16:38:06
-tags: git git-flow
+categories:
+  - git
+tags:
+  - git
+  - git-flow
+  - git flow
 ------
 # windows下git-flow的安装
 ---

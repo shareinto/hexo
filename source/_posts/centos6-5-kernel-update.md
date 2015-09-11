@@ -1,6 +1,10 @@
 title: centos6.5内核升级
 date: 2015-09-11 17:27:31
-tags: linux centos kernel
+categories: linux
+tags: 
+  - linux 
+  - centos 
+  - kernel
 ---
 ## 1. 查看当前内核版本
 ```bash
