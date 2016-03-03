@@ -5,11 +5,10 @@ categories:
 tags:
   - git
   - git-flow
-  - git flow
 ------
 # windows下git-flow的安装
 ---
-###本教程只针对安装了[1.9.5](http://cdncs.101.com/v0.1/static/skin_manager/default/biz-comp-main/ios/Git_V1.9.5_preview20150319.1435310867.exe?&attachment=true)(高版本此方法不行)版本的MSysGit的git-flow安装，如果是Cygwin版的请参照[这里](https://github.com/nvie/gitflow/wiki/Windows)
+### 本教程只针对安装了[1.9.5](http://cdncs.101.com/v0.1/static/skin_manager/default/biz-comp-main/ios/Git_V1.9.5_preview20150319.1435310867.exe?&attachment=true)(高版本此方法不行)版本的MSysGit的git-flow安装，如果是Cygwin版的请参照[这里](https://github.com/nvie/gitflow/wiki/Windows)
 
 安装流程如下：
 >1. 下载git-flow所依赖的包
