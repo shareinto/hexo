@@ -71,4 +71,8 @@ stylus:
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:shareinto/shareinto.github.io.git
+  repo: 
+    github: git@github.com:shareinto/shareinto.github.io.git
+    coding: git@git.coding.net:shareinto/shareinto.coding.me
+    menethil: ssh://git@git.menethil.net:10022/850428/shareinto.menethil.net.git
+  branch: master

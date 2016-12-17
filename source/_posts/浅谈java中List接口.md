@@ -111,6 +111,7 @@ public static void addObject(List list, int n) {
 ```java
 int number = 100000;
 int count = 100;
+List list = new ArrayList();
 System.out.println("遍历ArrayList：");
 addObject(list, number);
 travelwithoutIterator(list, count);
@@ -126,6 +127,9 @@ travelwithIterator(list, count);
 
 但是我们现在换成LinkedList来试一试：
 ```java
+int number = 100000;
+int count = 100;
+List list = new LinkedList();
 System.out.println("遍历LinkedList：");
 addObject(list, number);
 travelwithoutIterator(list, count);
@@ -137,7 +141,7 @@ travelwithIterator(list, count);
 不使用迭代器的间隔时间：1043247
 使用迭代器的间隔时间：139
 ```
-what the fuck! 这个坑也太大了吧！对于List的使用者来说，或者说正在编写一个框架的人，我们经常不知道List指针会接到什么样的一个具体实例，于是乎，我们只能以这种贴膏药的方式来修补我们的程序：
+对于List的使用者来说，或者说正在编写一个框架的人，我们经常不知道List指针会接到什么样的一个具体实例，于是乎，我们只能以这种贴膏药的方式来修补我们的程序：
 ```java
 if (list instanceof RandomAccess) {
     for (int i = list.size(); i < list.size(); i++) {
