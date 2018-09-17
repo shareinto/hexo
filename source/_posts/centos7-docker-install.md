@@ -50,11 +50,23 @@ $ sudo yum install docker-ce-<VERSION STRING>
 $ sudo systemctl start docker
 ```
 
-## 续：修改cgroup driver:
+## 续：
+###（1）修改cgroup driver:
 在 /usr/lib/systemd/system/docker.service 中添加以下启动项
 ```
 ExecStart=/usr/bin/dockerd \
           --exec-opt native.cgroupdriver=systemd
+```
+
+###（2）修改storage-driver:
+在/etc/docker/daemon.json 添加以下配置
+```
+{
+  "storage-driver": "overlay2",
+  "storage-opts": [
+    "overlay2.override_kernel_check=true"
+  ]
+}
 ```
 
 重启docker
