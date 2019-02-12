@@ -125,15 +125,15 @@ public class Program {
 }
 ```
 笔者使用的是Intellij Idea，Eclipse的使用大同小异。首先要点击右上角的Edit Configurations：
-![Edit Configurations](http://7xlovv.com1.z0.glb.clouddn.com/docker-debug.png)
+![Edit Configurations](/image/docker-debug.png)
 在弹出界面的左上角点击+号，选择Remote：
-![Remote](http://7xlovv.com1.z0.glb.clouddn.com/docker-debug2.png)
+![Remote](/image/docker-debug2.png)
 在配置界面中确保Host和Port和我们刚才在Docker插件中配置的值一致：
-![configuration](http://7xlovv.com1.z0.glb.clouddn.com/docker-debug3.png)
+![configuration](/image/docker-debug3.png)
 最关键的一步是添加maven goal,点击+号，在弹出框中输入clean package docker:build docker:start
-![maven goal](http://7xlovv.com1.z0.glb.clouddn.com/docker-debug4.png)
+![maven goal](/image/docker-debug4.png)
 这一步的意思是编译打包，然后build Docker镜像，最后创建并运行容器，这么多步骤在一个maven命中完成，虽然java那么烂，但好歹有个maven看得过去^_^。
 最后使用Shift+F9调试运行程序，可以看到断点命中，整个过程和本地调试体验一样:
-![break point](http://7xlovv.com1.z0.glb.clouddn.com/docker-debug5.png)
+![break point](/image/docker-debug5.png)
 
 (全文完)

@@ -15,19 +15,19 @@ int pipe(int fd[2]);
 ```
 经由参数返回两个文件描述符：fd[0]为读而打开，fd[1]为写而打开。fd[1]的输出是fd[0]的输入。下图是管道的结构：
 
-![管道](http://7xlovv.com1.z0.glb.clouddn.com/pipe.jpg)
+![管道](/image/pipe.jpg)
 
 单个进程中的管道几乎没有任何用处。通常，进程会先调用pipe，接着调用fork，从而创建从父进程到子进程的IPC通道，反之亦然。下图显示了这种情况
 
-![父子进程的管道](http://7xlovv.com1.z0.glb.clouddn.com/fork_pipe.jpg)
+![父子进程的管道](/image/fork_pipe.jpg)
 
 fork之后做什么取决于我们想要的数据流的方向。对于从父进程到子进程的管道，父进程关闭管道的读端(fd[0]),子进程关闭写端(fd[1])。下图显示了在此之后描述符的状态结果：
 
-![父子进程的管道](http://7xlovv.com1.z0.glb.clouddn.com/fork_pipe2.jpg)
+![父子进程的管道](/image/fork_pipe2.jpg)
 
 # 协同进程
 &#160; &#160; &#160; &#160;当A进程既产生B进程的输入，又读取B进程的输出时，B进程就变成了A进程的**协同进程**（coprocess）。下图显示了这种安排：
-![协同进程](http://7xlovv.com1.z0.glb.clouddn.com/coprocess.jpg)
+![协同进程](/image/coprocess.jpg)
 
 # 示例
 让我们通过一个示例来观察协同进程。我们先创建一个简单的协同进程，它从其标准输入读取两个数，计算它们的和，然后将和写至其标准输出。

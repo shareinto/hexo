@@ -34,4 +34,4 @@ C:\gitflow> contrib\msysgit-install.cmd "C:\Program Files (x86)\Git"
 ```bash
 $ git flow help
 ```
-![git-flow-success](http://7xlovv.com1.z0.glb.clouddn.com/git-flow-success.jpg)
+![git-flow-success](/image/git-flow-success.jpg)

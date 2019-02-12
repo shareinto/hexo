@@ -35,7 +35,7 @@ google_analytics: ''
 favicon: /favicon.png
 
 #你的头像url
-avatar: http://7xlovv.com1.z0.glb.clouddn.com/litten.png
+avatar: /image/litten.png
 #是否开启分享
 share: true
 #是否开启多说评论，填写你在多说申请的项目名称 duoshuo: duoshuo-key

@@ -169,7 +169,7 @@ while (count-- > 0)
 }
 ```
 这段程序生成的图片如下
-![](http://7xlovv.com1.z0.glb.clouddn.com/hello.png)
+![](/image/hello.png)
 
 将Random放入While循环中
 ```C#
@@ -187,7 +187,7 @@ while (count-- > 0)
     g.FillRectangle(b, x, y, 1, 1);
 }
 ```
-![](http://7xlovv.com1.z0.glb.clouddn.com/Csharp2.png)
+![](/image/Csharp2.png)
 
 这里只能看到零星的几个黑点，可以看到两者的差异非常大。但是在Java中这两种写法产生的结果是一致的。（实际上在早期的JDK版本也是和C#同样的结果）
 

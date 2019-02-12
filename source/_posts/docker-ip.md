@@ -26,11 +26,11 @@ bridge模式是docker的默认网络模式。当Docker进程启动时，会在�
 
 # bridge网络模式
 作为docker默认的网络模式，是最复杂也是运用最广的模式。我们先来看一下，在这种模式下，它的网格拓扑结构。
-![docker-bridge](http://7xlovv.com1.z0.glb.clouddn.com/docker-bridge.png)
+![docker-bridge](/image/docker-bridge.png)
 这里首先要讲解一下linux下虚拟网桥的概念：
 - 虚拟网桥：
   首先，它的主体部分是一个二层交换机，但是奇怪的是，我们在宿主机上查看linux网络设备docker0的时候，它会有一个ip地址（作者主机上的docker0）
-  ![docker0](http://7xlovv.com1.z0.glb.clouddn.com/docker0.png)
+  ![docker0](/image/docker0.png)
   稍微有点网络常识的人会知道，交换机是二层设备，是没有ip地址的。那么这个ip地址又是怎么来的呢。
   我们可以思考一下，假设你买了一个物理交换机回来以后，我们的主机要如何使用这个交换机？答案很简单，用一根网线将主机上的某一块网卡接到交换机的一个端口上面！是的，那么docker0设备上的ip实际上就是主机上连接交换机网卡的ip。
   所以，linux的虚拟网桥实际上包括三部分：
@@ -45,9 +45,9 @@ bridge模式是docker的默认网络模式。当Docker进程启动时，会在�
   - 另一个安装在主机上的网卡
   - 一根连接这两个网卡的网线
   大家可能会觉得奇怪，这样的网络设备有什么用，数据从一个网卡出去，再从另外一块网卡进来？其实，这种网络设备有一个特点，就是两块网卡可以分别处于不同的network namespace。
-  ![veth-pair](http://7xlovv.com1.z0.glb.clouddn.com/veth-pair.png)
+  ![veth-pair](/image/veth-pair.png)
   docker正是利用了这种特性，将其中的一块网卡添加到容器内部，另外一块留在宿主机上面，大家通过ifconfig命令在宿主机可以看到vethxxx这样的网络设备，但是这样的网络设备它是没有ip地址的。
-  ![vethxxx](http://7xlovv.com1.z0.glb.clouddn.com/vethxxx.png)
+  ![vethxxx](/image/vethxxx.png)
   这又是为什么呢？这要回到上面提到的虚拟网桥。实际上这块网卡被添加到了docker0的交换机设备上，变成了该交换机上的一个端口，交换机的端口没有ip也就很正常了。
   我们可以通过brctl命令，将一个物理设备添加到一个虚拟网桥上面：
   ```bash
@@ -64,7 +64,7 @@ bridge模式是docker的默认网络模式。当Docker进程启动时，会在�
 
 # 给docker容器分配一个和宿主机处于同一网段的ip
 bridge网络有一个问题，就是多个容器要同时对外暴露服务时，会竞争宿主机上面的端口，导致端口资紧张的情况发生。那么我们能不能给docker分配一个和宿主机处于同一个网段的ip，这样，外部网络就可以直接访问该容器了呢?答案当然是可以，我们现在就利用上面的知识，来更改一下docker的网络拓扑结构。
-![docker-bridge2](http://7xlovv.com1.z0.glb.clouddn.com/docker-bridge2.png)
+![docker-bridge2](/image/docker-bridge2.png)
 这里我们为了避免连接不上宿主机，另外创建一个虚拟网桥br0
 em1是宿主机上的网卡，它的ip为172.24.133.39/24。我们的做法很简单，将em1添加到docker0网桥上，然后将ip（172.24.133.39）设置给br0设备。
 ```bash

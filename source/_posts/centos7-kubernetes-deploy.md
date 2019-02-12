@@ -1,6 +1,5 @@
 title: centos7-kubernetes-deploy
 date: 2017-03-20 15:58:17
-tags:
 categories: docker kubernetes
 tags:
   - docker

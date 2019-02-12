@@ -99,6 +99,6 @@ Java HotSpot(TM) 64-Bit Server VM (build 24.65-b04, mixed mode)
 可以看到MaxHeapSize=256m,InitialHeapSize=16m
 
 笔者最后给最开始被OOM Killed的Java程序加上最大堆限制之后，就再也没有出现被Kill的情况，附上内存图：
-![](http://7xlovv.com1.z0.glb.clouddn.com/JVMInDocker.jpg)
+![](/image/JVMInDocker.jpg)
 
 （全文完）

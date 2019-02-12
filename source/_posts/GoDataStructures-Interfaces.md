@@ -77,11 +77,11 @@ Go则位于两者的中间，它拥有方法表，但却是在运行时计算它
 
 举个例子,一个Binary类型的值是一个64位整型，它由两个32位的字组成（假设我们现在使用的是32位的机器）
 
-![](http://7xlovv.com1.z0.glb.clouddn.com/gointer1.png)
+![](/image/gointer1.png)
 
 Interface由两个字长组成，其中一个存储指向接口类型表的指针，另一个存储指向数据的指针。如果将b赋值给一个Stringer类型的接口变量，其内存结构如下图所示
 
-![](http://7xlovv.com1.z0.glb.clouddn.com/gointer2.png)
+![](/image/gointer2.png)
 
 (接口中存储的指针对程序是不可见的，它不会直接暴露给用户)
 
@@ -107,13 +107,13 @@ Interface由两个字长组成，其中一个存储指向接口类型表的指�
 
 - 如果接口类型是interface{}的情况下，也就是没有任何方法的情况下，itable也就没有存在的必要。在这种情况下，第一个字就可以存储实际类型了：
 
-![](http://7xlovv.com1.z0.glb.clouddn.com/gointer3.png)
+![](/image/gointer3.png)
 
 一个接口有没有方法go将用一个静态属性表示，因此编译器知道第一个字表示的是哪一种情况。
 
 - 如果接口所关联的类型的值大小刚好是一个机器字长，那就没有必要进行堆内存的申请了。如果我们像Binary一样定义一个Binary32，将uint32作为它的底层类型，那么它的值就可以直接存储在第二个字中：
 
-![](http://7xlovv.com1.z0.glb.clouddn.com/gointer4.png)
+![](/image/gointer4.png)
 
 在这种情况下，String的函数签名将变成(Binary) string,而不是原来的(*Binary) string。
 

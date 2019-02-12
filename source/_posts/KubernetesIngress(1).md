@@ -70,7 +70,7 @@ spec:
 Ingress Controller作为一个守户进程，通过监听apiserver的ingresses资源变化，并且根据其指定的规则建立起外部网络访问内部服务的通道。对于官方描述的 deployed as a Kubernetes Pod，实际上是没办法运用到生产环境当中去的，这个我们在后面会提到这个问题，并且会有相应的解决方案。
 
 ## Ingress Controller的架构
-![ingress-controller](http://7xlovv.com1.z0.glb.clouddn.com/ingress-controller.png)
+![ingress-controller](/image/ingress-controller.png)
 
 上图展示了一个nginx ingress controller的部署架构图，ingress controller通过轮询监听apiserver的方式来获取ingress资源的变化，将ingress资源存储到本地缓存，并通知nginx进行相应的配置修改的加载。
 ingress controller监控了ingress、service、endpoint、secret、node、configmap一系列资源，一旦资源发生了变化（包括增加、删除和修改），会立即通知backend，例如nginx等。
@@ -83,12 +83,12 @@ ingress controller监控了ingress、service、endpoint、secret、node、config
 关于flannel的原理，这里有一篇文章分析得很详细[DockOne技术分享（十八）：一篇文章带你了解Flannel](http://dockone.io/article/618)
 
 这是flannel的原理图：
-![flannel](http://7xlovv.com1.z0.glb.clouddn.com/flannel.png)
+![flannel](/image/flannel.png)
 
 通过该图我们可以看到通过docker0和flannel0这两块网卡打通了宿主机和集群内部的一个网络通道。
 
 笔记在自己的节点上进行了验证
-![flannel-if](http://7xlovv.com1.z0.glb.clouddn.com/flannel-if.png)
+![flannel-if](/image/flannel-if.png)
 
 也就是说只要部署在该宿主机上的程序，都可以访问该节点上的任何docker容器，至于其它节点的docker容器，通过flanneld到节点的物理网卡，在flanned的时候数据包会被另外一种协议包装（如UDP、VxLAN、AWS VPC和GCE路由）成packet，该包到了另外一个节点的物理网卡再交由flanned进行解包，之后再通过虚拟的flannel和docker两块网卡路由到容器内部。
 

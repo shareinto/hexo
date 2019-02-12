@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    ingress.kubernetes.io/ssl-redirect: "false"
+  name: blog
+  namespace: shareinto
+spec:
+  rules:
+  - host: shareinto.k8s.101.com
+    http:
+      paths:
+      - backend:
+          serviceName: blog
+          servicePort: 80
+  tls:
+    - hosts:
+      - shareinto.k8s.101.com
+      secretName: k8s.101.com
