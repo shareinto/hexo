@@ -1,2 +1,2 @@
-FROM registry.101.com/sdp/nginx
+FROM nginx
 COPY ./ /usr/share/nginx/html

@@ -10,7 +10,7 @@
     <properties>
         <dockerHost>http://192.168.138.128:4243</dockerHost>
         <maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
-        <image.name>wx-registry.101.com/sdp/shareinto:${git.commit.id.abbrev}</image.name>
+        <image.name>registry.cn-hangzhou.aliyuncs.com/shareinto/shareinto:${git.commit.id.abbrev}</image.name>
         <namespace>shareinto</namespace>
         <kubeconfig>wxconfig</kubeconfig>
     </properties>
@@ -36,8 +36,8 @@
                     </images>
                     <authConfig>
                         <push>
-                            <username>Admin</username>
-                            <password>1024kb=1Mb</password>
+                            <username>56471924@qq.com</username>
+                            <password>8327639jing</password>
                         </push>
                     </authConfig>
                 </configuration>
